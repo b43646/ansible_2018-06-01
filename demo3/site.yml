@@ -1,0 +1,6 @@
+---
+- name: demo
+  hosts: all
+  tasks:
+    - name: check if host can reach the db server
+      can_reach: host=localhost port=8888 timeout=1
