@@ -1,0 +1,12 @@
+---
+- name: say 'hello world'
+  hosts: all
+  vars_files:
+    - defaults/main.yml
+  tasks:
+    - name: echo 'hello world'
+      command: echo 'hello '
+      register: result
+    - name: print stdout
+      debug:
+        msg: "{{world}}"
